@@ -59,7 +59,7 @@ function Signup() {
         <ThemeToggle />
       </div>
 
-      <Card className="w-full max-w-md">
+      <Card className="w-full max-w-md bg-white/80 dark:bg-gray-900/80">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold">Create Account</CardTitle>
           <CardDescription>Sign up to start chatting with Gemini</CardDescription>
@@ -79,12 +79,12 @@ function Signup() {
                 onValueChange={(value) => setValue("countryCode", value)}
                 disabled={countriesLoading}
               >
-                <SelectTrigger>
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select country" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="">
                   {countries.map((country) => (
-                    <SelectItem key={country.code} value={country.dialCode}>
+                    <SelectItem  key={country.code} value={country.dialCode}>
                       <div className="flex items-center gap-2">
                         <span>{country.flag}</span>
                         <span>{country.name}</span>
@@ -100,7 +100,7 @@ function Signup() {
             <div className="space-y-2">
               <Label htmlFor="phoneNumber">Phone Number</Label>
               <div className="flex">
-                <div className="flex items-center px-3 border border-r-0 rounded-l-md bg-muted text-muted-foreground">
+                <div className="flex items-center px-3 border border-r-0 rounded-l-md  text-muted-foreground bg-white/80 dark:bg-gray-900/80">
                   {countryCode || "+1"}
                 </div>
                 <Input {...register("phoneNumber")} type="tel" placeholder="1234567890" className="rounded-l-none" />
