@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gemini Frontend Clone – Kuvaka Tech
 
-## Getting Started
+A Gemini-style conversational AI frontend built as part of Kuvaka Tech’s Frontend Developer Assignment. This responsive web app simulates OTP login, chatroom management, and AI-powered messaging with a polished UX.
 
-First, run the development server:
+🔗 **Live Demo:** [https://your-live-link.com](https://your-live-link.com)  
+
+---
+
+## ✨ Key Features
+
+- 🔐 **OTP Login/Signup**  
+  → Select country code (fetched from [restcountries.com])  
+  → **OTP appears in the browser console** (simulated via `setTimeout`)  
+
+- 💬 **Chatroom Interface**  
+  → AI responses with throttling + typing effect  
+  → Infinite scroll & message pagination  
+  → Image upload with base64 preview  
+  → Copy-to-clipboard, timestamps, auto-scroll
+
+- 📋 **Dashboard**  
+  → Create/Delete chatrooms with toast feedback  
+  → Debounced search to filter chatrooms
+
+- 🌗 **Global UX**  
+  → Dark mode toggle  
+  → Mobile responsive design  
+  → Loading skeletons  
+  → LocalStorage for auth & chat data  
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js 15 (App Router)**
+- **Tailwind CSS**
+- **Zustand** – State Management
+- **React Hook Form + Zod** – Form Validation
+- **Vercel** – Deployment
+
+---
+
+## 📁 Folder Structure
+/app → Routes (login, dashboard, chatroom)
+/components → UI & logic components
+/lib → Zustand store, hooks, utils, validation
+/public, styles → Assets & global styles
+
+yaml
+Copy
+Edit
+
+---
+
+## 🧪 How to Run Locally
 
 ```bash
+git clone https://github.com/yourusername/gemini-frontend-kuvaka.git
+cd gemini-frontend-kuvaka
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
